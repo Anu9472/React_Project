@@ -1,0 +1,50 @@
+.logo img {
+  width: 100px;    
+  height: auto;    
+}
+
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav{
+  display:flex;
+  justify-content: space-between;
+  height: 72px;
+  align-items: center;
+}
+
+nav>ul{
+  display: flex;
+  list-style: none;
+  gap: 24px;
+
+}
+
+button{
+  all: unset;
+  padding: 6px ,16px;
+ /* background-color:whitesmoke; */
+ border: black;
+  height: 32px;
+ color:red;
+ font: 500;
+
+}
+
+.brand-icons img {
+  width: 60px;      
+  height: auto;  
+  margin-right: 10px;
+}
+
+.hero{
+  display: flex;
+}
+
+.hero-image{
+  height:3px;
+  width: 2px;
+}
