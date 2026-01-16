@@ -30,11 +30,13 @@ const Hero = ()=>{
 
 
 
-
-          </div>
+  </div>
+        
           <div className="hero-image">
 
-          <img src="https://i.ebayimg.com/images/g/IUYAAOSwK6FnD9pG/s-l1200.jpg" alt="hero-image" />
+          <img src="/images/shoes.png" alt="shoes-logo" />
+
+
 
 
           </div>
