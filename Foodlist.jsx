@@ -1,20 +1,21 @@
-import React from "react";
-import FoodCard from "./FoodCard";
+import React from 'react';
+import foods from "../data"
+import FoodCard from './FoodCard'
 
-const Foodlist = ({ FoodData, cart, setCart }) => {
-  return (
-    <div>
-      {FoodData.map(item => (
-        <FoodCard
-          key={item.id}
-          item={item}
-          cart={cart}
-          setCart={setCart}
-        />
-      ))}
-    </div>
-  );
-};
 
-export default Foodlist;
 
+const Foodlist = ()=>{
+    return(
+        <div style={{display:"grid",
+            gridTemplateColumns:"repeat(4,1fr)",
+            gap:"20px"
+        }} 
+        >
+               {foods.map((food) =>(
+                <FoodCard key={food.id} food={food}/>
+               ))}
+        </div>
+    );
+}
+
+export default Foodlist

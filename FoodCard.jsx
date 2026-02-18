@@ -1,23 +1,23 @@
 import React, { useContext } from "react";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from '../context/CartContext'
 
-const FoodCard = ({ item, cart, setCart }) => {
+const FoodCard = ({food}) => {
 
-  const { setCartCount } = useContext(CartContext);
+    const {addtoCart}  = useContext(CartContext);
 
-  function addToCart() {
-    const updatedCart = [...cart, item];
-    setCart(updatedCart);                 // update cart
-    setCartCount(updatedCart.length);     // update navbar count
-  }
+    return(
+        <div style={{border: "1px solid gray",
+            padding:"10px",
+        }}
+        >
+            <img style={{width: "300px",
+                height:"300px",
+            }} src={food.image} alt="" />
+            <h3>{food.name}</h3>
+            <p>{food.price}</p>
+            <button onClick={() => addtoCart(food)}>Add to Cart</button>
+        </div>
+    );
+}
 
-  return (
-    <div style={{ border: "2px solid #ccc", margin: 10, padding: 10 }}>
-      <h4>{item.name}</h4>
-      <h5>₹{item.price}</h5>
-      <button onClick={addToCart}>Add to Cart</button>
-    </div>
-  );
-};
-
-export default FoodCard;
+export default FoodCard
